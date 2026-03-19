@@ -5,6 +5,7 @@ import Skills from './components/Skills/Skills'
 import Projects from './components/Projects/Projects'
 import Experience from './components/Experience/Experience'
 import Contact from './components/Contact/Contact'
+import Chat from './components/Chat/Chat'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Experience />
         <Contact />
       </main>
+      <Chat />
     </>
   )
 }
