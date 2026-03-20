@@ -2,6 +2,22 @@ import Anthropic from '@anthropic-ai/sdk'
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
+const rateLimitMap = new Map()
+const RATE_LIMIT = 20
+const WINDOW_MS = 60 * 60 * 1000
+
+function isRateLimited(ip) {
+  const now = Date.now()
+  const entry = rateLimitMap.get(ip) || { count: 0, start: now }
+  if (now - entry.start > WINDOW_MS) {
+    rateLimitMap.set(ip, { count: 1, start: now })
+    return false
+  }
+  if (entry.count >= RATE_LIMIT) return true
+  rateLimitMap.set(ip, { count: entry.count + 1, start: entry.start })
+  return false
+}
+
 const SYSTEM_PROMPT = `You are a helpful assistant on Sriram Krishna's portfolio website.
 Answer questions about Sriram based only on the information below.
 Be concise, friendly, and professional. Keep answers to 2-3 sentences max unless more detail is needed.
@@ -66,6 +82,14 @@ Skills:
 export default async (req) => {
   if (req.method !== 'POST') {
     return new Response('Method not allowed', { status: 405 })
+  }
+
+  const ip = req.headers.get('x-forwarded-for') || 'unknown'
+  if (isRateLimited(ip)) {
+    return new Response(
+      JSON.stringify({ error: 'Too many requests. Please try again later.' }),
+      { status: 429, headers: { 'Content-Type': 'application/json' } }
+    )
   }
 
   try {
