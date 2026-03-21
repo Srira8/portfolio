@@ -3,11 +3,12 @@ import { personal } from '../../data/portfolioData'
 import styles from './Navbar.module.css'
 
 const NAV_LINKS = [
-  { label: 'About',      href: '#about' },
-  { label: 'Skills',     href: '#skills' },
-  { label: 'Projects',   href: '#projects' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Contact',    href: '#contact' },
+  { label: 'About',            href: '#about' },
+  { label: 'Skills',           href: '#skills' },
+  { label: 'Projects',         href: '#projects' },
+  { label: 'Experience',       href: '#experience' },
+  { label: 'Intelligence Lab', href: '#ai-lab' },
+  { label: 'Contact',          href: '#contact' },
 ]
 
 export default function Navbar() {

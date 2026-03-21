@@ -75,6 +75,22 @@
   padding: 0.2rem 0.6rem;
 }
 
+/* ── GitHub link ── */
+.githubLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.githubLink:hover {
+  color: var(--accent);
+}
+
 /* ── Title ── */
 .title {
   font-family: var(--font-display);

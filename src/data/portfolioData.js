@@ -90,6 +90,38 @@ export const projects = [
     tech: ['Azure', 'C#', 'SQL', 'Kubernetes', 'CosmosDB', 'OAuth 2.0'],
   },
   {
+    type: 'Gen AI / RAG',
+    title: 'Python Code Assistant using RAG',
+    description:
+      'Retrieval-Augmented Generation system that answers Python coding questions by retrieving relevant documentation and code snippets before generating responses.',
+    tech: ['Python', 'RAG', 'LLM', 'Vector Search'],
+    github: 'https://github.com/Srira8/Python_code_assitant_using_RAG',
+  },
+  {
+    type: 'AI Agent',
+    title: 'Intelligent Research Agent',
+    description:
+      'Autonomous research agent that intelligently gathers, synthesizes, and presents information on user-defined topics using LLM-powered reasoning.',
+    tech: ['Python', 'LLM', 'Agentic AI'],
+    github: 'https://github.com/Srira8/Intelligent-and-Research-Agent',
+  },
+  {
+    type: 'AI / NLP',
+    title: 'Fake News Detection',
+    description:
+      'NLP-based machine learning model for classifying news articles as real or fake using text features and supervised learning techniques.',
+    tech: ['Python', 'NLP', 'Scikit-learn', 'ML'],
+    github: 'https://github.com/Srira8/FakeNews-Detection',
+  },
+  {
+    type: 'Azure / OCR',
+    title: 'Document Intelligence OCR',
+    description:
+      'Python-based OCR pipeline using Azure Document Intelligence to extract and process structured data from unstructured documents.',
+    tech: ['Python', 'Azure Document Intelligence', 'OCR'],
+    github: 'https://github.com/Srira8/document-intelligence-ocr',
+  },
+  {
     type: 'Real-time Systems',
     title: 'Real-time Accident Detection System',
     description:
@@ -109,6 +141,47 @@ export const projects = [
     description:
       'End-to-end supervised ML deployment with model registry and real-time endpoints. SageMaker Pipelines for CI/CD, drift monitoring, and automated retraining.',
     tech: ['AWS SageMaker', 'Python', 'S3', 'CloudWatch'],
+    github: 'https://github.com/Srira8/ML-model-on-Amazon-SageMaker',
+  },
+  {
+    type: 'ML / Data Science',
+    title: 'California House Price Prediction',
+    description:
+      'Machine learning model predicting California housing prices using regression techniques on the California Housing dataset with feature engineering and model evaluation.',
+    tech: ['Python', 'Scikit-learn', 'Jupyter', 'Pandas', 'NumPy'],
+    github: 'https://github.com/Srira8/House_Prediction_California',
+  },
+  {
+    type: 'AI / Chatbot',
+    title: 'Plant Care Bot',
+    description:
+      'Conversational AI chatbot that provides plant care advice, watering schedules, and diagnosis for common plant issues using LLM-powered responses.',
+    tech: ['Python', 'LLM', 'Chatbot'],
+    github: 'https://github.com/Sriram29v/Plant_care_Bot',
+  },
+  {
+    type: 'AI / Productivity',
+    title: 'Job Application Assistant',
+    description:
+      'AI-powered assistant that helps users tailor resumes, craft cover letters, and prepare for interviews based on job descriptions.',
+    tech: ['Python', 'LLM', 'NLP'],
+    github: 'https://github.com/Srira8/Job-Application-Assistant',
+  },
+  {
+    type: 'Automation',
+    title: 'Quora Scraping using Selenium',
+    description:
+      'Automated Selenium pipeline for scraping and analyzing 10,000+ Quora interactions. Data used in peer-reviewed research on online Q&A behavior.',
+    tech: ['Python', 'Selenium', 'Jupyter', 'Data Analysis'],
+    github: 'https://github.com/Srira8/Quora-Scraping-using-Selenium',
+  },
+  {
+    type: 'Web / Civic Tech',
+    title: 'Seattle Parking Finder',
+    description:
+      'Web app for finding available parking spots across Seattle using location data and real-time availability information.',
+    tech: ['HTML', 'JavaScript', 'CSS'],
+    github: 'https://github.com/Srira8/Seattle-parking-finder',
   },
 ]
 
